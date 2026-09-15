@@ -1815,3 +1815,29 @@ body.figma-body {
   z-index: 1;
   pointer-events: none; /* So it doesn't block clicks */
 }
+
+@keyframes crossfade4 {
+  0%   { opacity: 1; }
+  15%  { opacity: 1; }
+  25%  { opacity: 0; }
+  90%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.carousel-slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  animation: crossfade4 16s infinite;
+  opacity: 0;
+}
+
+.bg-slide-1 { animation-delay: 0s; }
+.bg-slide-2 { animation-delay: 4s; }
+.bg-slide-3 { animation-delay: 8s; }
+.bg-slide-4 { animation-delay: 12s; }
+
