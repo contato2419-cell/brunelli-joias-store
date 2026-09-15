@@ -156,8 +156,8 @@
     const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
     const orderItems = cart.map(i => `• ${i.title} (x${i.qty}) - ${formatCurrency(i.price * i.qty)}`).join('%0A');
     const msg = `Olá! Gostaria de finalizar meu pedido na Brunelli Joias em Prata 925:%0A%0A${orderItems}%0A%0ATotal: ${formatCurrency(subtotal)}%0A%0APor favor, me envie as opções para pagamento via Pix/Cartão e envio/retirada no Box 111 Eldorado.`;
-    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, '_blank');
-    window.showToast('Conectando ao WhatsApp da Brunelli Joias...');
+    window.location.href = `https://wa.me/${WHATSAPP_PHONE}?text=${msg}`;
+    // Notificações desativadas
   };
 
   // Initial update

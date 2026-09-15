@@ -117,20 +117,7 @@
   // 5. Toast Hub
   // ==========================================================================
   window.showToast = function(message) {
-    const hub = document.getElementById('toast-hub');
-    if (!hub) return;
-
-    const toast = document.createElement('div');
-    toast.className = 'toast-item';
-    toast.innerHTML = `<span>${message}</span>`;
-    hub.appendChild(toast);
-
-    setTimeout(() => {
-      toast.style.opacity = '0';
-      toast.style.transform = 'translateX(100%)';
-      toast.style.transition = 'all 0.3s ease';
-      setTimeout(() => toast.remove(), 300);
-    }, 3500);
+    // Notificações desativadas a pedido do usuário
   };
 
   // Initialize

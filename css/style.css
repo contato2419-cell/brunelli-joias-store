@@ -1799,6 +1799,8 @@ body.figma-body {
 }
 .shop-by-size-section {
   position: relative;
+  padding: 100px 0; /* Aumentado para dar mais altura ao banner */
+  background-color: #ffffff;
   overflow: hidden;
 }
 .category-bg-banner {
@@ -1808,10 +1810,10 @@ body.figma-body {
   width: 100%;
   height: 100%;
   background-image: url('../assets/logo_banner.png');
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: 0.15; /* Mais visível como banner, sem cortar */
+  opacity: 0.35; /* Bem visível como banner */
   z-index: 1;
   pointer-events: none; /* So it doesn't block clicks */
 }
