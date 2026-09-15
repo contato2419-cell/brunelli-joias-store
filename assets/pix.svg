@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 32" width="31" height="20">
+  <rect width="48" height="32" rx="2" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <path d="M18 11l-3 5 3 5h3l-3-5 3-5h-3zm12 0l-3 5 3 5h3l-3-5 3-5h-3zm-6 2l-3 3 3 3 3-3-3-3z" fill="#32BCAD"/>
+  <text x="24" y="27" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#32BCAD" text-anchor="middle">PIX</text>
+</svg>

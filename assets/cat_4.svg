@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 626 313" width="626" height="313">
+    <defs>
+      <linearGradient id="grad_ALTA JOALHERIA" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#450a0a" />
+        <stop offset="100%" stop-color="#1c1917" />
+      </linearGradient>
+    </defs>
+    <rect width="626" height="313" rx="4" fill="url(#grad_ALTA JOALHERIA)" />
+    <!-- Fine geometric luxury pattern lines -->
+    <path d="M0,0 L626,313 M-100,100 L526,413 M100,-100 L726,213" stroke="rgba(212,175,55,0.15)" stroke-width="1.5" />
+    <circle cx="540" cy="80" r="60" fill="none" stroke="rgba(212,175,55,0.12)" stroke-width="1" />
+    <circle cx="540" cy="80" r="40" fill="none" stroke="rgba(212,175,55,0.08)" stroke-width="1" />
+    
+    <!-- Tag badge -->
+    <rect x="40" y="45" width="130" height="26" rx="13" fill="rgba(212,175,55,0.2)" stroke="rgba(212,175,55,0.5)" />
+    <text x="105" y="62" font-family="'Poppins', sans-serif" font-size="10" font-weight="700" fill="#EAB308" text-anchor="middle" letter-spacing="1.5">ALTA JOALHERIA</text>
+    
+    <!-- Title -->
+    <text x="40" y="130" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">ESMERALDAS & GEMAS</text>
+    
+    <!-- Subtitle -->
+    <text x="40" y="168" font-family="'Poppins', sans-serif" font-size="15" font-weight="400" fill="rgba(255,255,255,0.85)">Cores preciosas selecionadas à mão em peças únicas</text>
+    
+    <!-- CTA Button -->
+    <rect x="40" y="215" width="150" height="42" rx="4" fill="#EAB308" />
+    <text x="115" y="241" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#111827" text-anchor="middle" letter-spacing="1">VER COLEÇÃO</text>
+  </svg>
