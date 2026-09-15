@@ -95,7 +95,7 @@
     <!-- Categories Subnav: As 9 Categorias Solicitadas -->
     <nav class="categories-nav-bar" aria-label="Categorias de Joias em Prata">
       <ul class="categories-menu-list">
-        <li class="category-menu-item active"><a href="#masculino" onclick="window.filterByCategory('MASCULINO')">MASCULINO</a></li>
+        <li class="category-menu-item"><a href="#masculino" onclick="window.filterByCategory('MASCULINO')">MASCULINO</a></li>
         <li class="category-menu-item"><a href="#pulseira-feminina" onclick="window.filterByCategory('PULSEIRA FEMININA')">PULSEIRA FEMININA</a></li>
         <li class="category-menu-item"><a href="#categorias" onclick="window.filterByCategory('PIERCINGS')">PIERCINGS</a></li>
         <li class="category-menu-item"><a href="#categorias" onclick="window.filterByCategory('ANÉIS')">ANÉIS</a></li>
@@ -112,22 +112,26 @@
        Hero Section
        ========================================================================== -->
   <section class="hero-carousel-section" id="hero-slider" aria-label="Destaques Brunelli Joias">
-    <div class="carousel-slides-wrapper">
-      <div class="carousel-slide-item active">
-        <img src="assets/hero_brunelli.jpg" alt="Brunelli Joias em Prata 925" class="carousel-slide-image bg-slide-1">
-        <img src="assets/hero_bg_2.png" alt="" class="carousel-slide-image bg-slide-2">
-        <img src="assets/hero_bg_3.png" alt="" class="carousel-slide-image bg-slide-3">
-        <img src="assets/hero_bg_4.jpg" alt="" class="carousel-slide-image bg-slide-4">
-        <div class="carousel-overlay-content">
-          <div class="hero-text-box">
-            <span class="hero-sub-tag">JÓIAS EM PRATA LEGÍTIMA 925 • CONTAGEM / MG</span>
-            <h1 class="hero-main-title">Apaixonada por Prata como você.</h1>
-            <p class="hero-description-text">
-              Peças exclusivas com garantia vitalícia da autenticidade da Prata 925 selecionadas por <strong>@mrlissabrunelli</strong>.<br>
-              Visite nosso <strong>Box 111 na Feirinha do Paraguai Eldorado</strong> ou peça pelo WhatsApp com entrega segura!
-          </div>
-        </div>
+    <div class="carousel-track" id="hero-track">
+      <div class="carousel-slide"><img src="assets/hero_bg_2.png" alt="Peça Brunelli 1"></div>
+      <div class="carousel-slide"><img src="assets/hero_bg_3.png" alt="Peça Brunelli 2"></div>
+      <div class="carousel-slide"><img src="assets/hero_bg_4.jpg" alt="Peça Brunelli 3"></div>
+    </div>
+    
+    <div class="carousel-overlay-content">
+      <div class="hero-text-box">
+        <span class="hero-sub-tag">JÓIAS EM PRATA LEGÍTIMA 925 • CONTAGEM / MG</span>
+        <h1 class="hero-main-title">Apaixonada por Prata como você.</h1>
+        <p class="hero-description-text">
+          Peças exclusivas com garantia vitalícia da autenticidade da Prata 925 selecionadas por <strong>@mrlissabrunelli</strong>.<br>
+          Visite nosso <strong>Box 111 na Feirinha do Paraguai Eldorado</strong> ou peça pelo WhatsApp com entrega segura!
       </div>
+    </div>
+
+    <div class="carousel-dots" id="hero-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
   </section>
 
@@ -1367,7 +1371,7 @@
       <!-- Column 1: A LOJA -->
       <div class="footer-nav-col">
         <div style="margin-bottom: 14px;">
-          <img src="assets/logo_brunelli_pratas.png" alt="Brunelli Joias em Prata 925" style="height: 48px; width: auto; filter: brightness(0) invert(1);">
+          <img src="assets/logo_brunelli_pratas.png" alt="Brunelli Joias em Prata 925" style="height: 48px; width: auto; background-color: #fff; padding: 5px; border-radius: 4px;">
         </div>
         <p style="font-family: var(--font-poppins); font-size: 12.5px; color: #94A3B8; line-height: 1.6; margin-bottom: 12px;">
           Jóias em prata legítima 925.<br>

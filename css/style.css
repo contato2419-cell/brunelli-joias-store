@@ -304,33 +304,29 @@ body.figma-body {
   height: 844.34px;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   z-index: 1;
 }
 
 .carousel-slide-track {
+  display: flex;
   width: 100%;
   height: 100%;
-  position: relative;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 
-.carousel-slide-item {
-  position: absolute;
-  top: 0;
-  left: 0;
+.carousel-slide {
+  flex: 0 0 100%;
   width: 100%;
-  height: 844px;
-  opacity: 1;
-  visibility: visible;
+  height: 100%;
+  overflow: hidden;
 }
 
-.carousel-slide-item img {
+.carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
 }
 
 .carousel-overlay-content {
@@ -343,11 +339,14 @@ body.figma-body {
   display: flex;
   align-items: center;
   padding-left: max(20px, calc((100% - var(--container-width)) / 2 + 20px));
+  z-index: 5;
+  pointer-events: none;
 }
 
 .hero-text-box {
   max-width: 620px;
   color: #FFFFFF;
+  pointer-events: auto;
 }
 
 .hero-sub-tag {
@@ -1818,28 +1817,26 @@ body.figma-body {
   pointer-events: none; /* So it doesn't block clicks */
 }
 
-@keyframes crossfade4 {
-  0%   { opacity: 1; }
-  15%  { opacity: 1; }
-  25%  { opacity: 0; }
-  90%  { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.carousel-slide-image {
+.carousel-dots {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 24px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  animation: crossfade4 16s infinite;
-  opacity: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
 }
 
-.bg-slide-1 { animation-delay: 0s; }
-.bg-slide-2 { animation-delay: 4s; }
-.bg-slide-3 { animation-delay: 8s; }
-.bg-slide-4 { animation-delay: 12s; }
+.carousel-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+  background: #ffffff;
+}
 

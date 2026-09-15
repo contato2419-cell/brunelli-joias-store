@@ -173,3 +173,41 @@ function initScrollIndicators() {
 }
 document.addEventListener('DOMContentLoaded', initScrollIndicators);
 
+// ==========================================================================
+// Hero Slider - Slide lateral com bolinhas e touch/swipe
+// ==========================================================================
+function initHeroSlider() {
+  const track = document.getElementById('hero-track');
+  const dotsContainer = document.getElementById('hero-dots');
+  if (!track || !dotsContainer) return;
+
+  const slides = track.querySelectorAll('.carousel-slide');
+  const dots = dotsContainer.querySelectorAll('.dot');
+  let current = 0;
+  let autoplay;
+  let touchStartX = 0;
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function next() { goTo(current + 1); }
+
+  // Bolinhas clicáveis
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); restartAuto(); }));
+
+  // Autoplay a cada 5s
+  function startAuto() { autoplay = setInterval(next, 5000); }
+  function restartAuto() { clearInterval(autoplay); startAuto(); }
+  startAuto();
+
+  // Swipe touch (mobile)
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? goTo(current + 1) : goTo(current - 1); restartAuto(); }
+  });
+}
+document.addEventListener('DOMContentLoaded', initHeroSlider);
